@@ -1,0 +1,161 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(224, 224, 224);
+}
+header{
+    padding: 5px 0;
+    background-color: white;
+}
+div.contenedor{
+    width: 1500px;
+    margin: 0 auto;   
+    border-color: lightgray;
+    border-style: solid;
+    border-bottom: none;
+    border-top: 10px solid rgb(9, 200, 207);
+    border-width: 2px;
+   
+}
+#logoinicio.logoinicio{
+    margin-left: 500px;
+}
+
+div.contenido-principal::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+main{
+    width: 90%;
+    float: left;
+    padding-right: 40px;
+    background-color: white;
+}
+.contenido-principal{
+    width: 1500px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-color: lightgray;
+    border-style: solid;
+    border-bottom: 10px solid rgb(9, 200, 207);
+    border-top: none;
+    border-width: 2px;
+    
+
+}
+#grafo1{
+    width: 800px;
+    height: 500px;
+    border: 1px solid lightgray;
+    margin-left: 317px;
+}
+div.pantalla-grafo{
+    width: 800px;
+    height: 500px;
+    border: 1px solid lightgray;
+    margin-left: 317px;
+}
+.boton{
+    background-color: rgb(9, 200, 207);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+.boton:hover {
+    background-color: white;
+    border: 2px solid rgb(9, 200, 207);
+    color: black;
+    box-shadow: 0 2px 17px 0 rgba(0,0,0,0.24),0 0px 0px 0 rgba(0,0,0,0.19);
+}
+
+section{
+    margin-top: 40px;
+    margin-left: 200px;
+}
+.controls{
+    width: 250px;
+    padding: 10px ;
+    border: 1px solid rgb(9, 200, 207);
+}
+#eliminarV{
+    background-image: url(../Locur/img/1024px-Cross_red_circle.svg.png);
+    background-position: 212px -5px ;
+    background-size: 50px, 70px;
+    background-repeat: no-repeat;
+
+}
+#eliminarA{
+    background-image: url(../Locur/img/1024px-Cross_red_circle.svg.png);
+    background-position: 212px -5px ;
+    background-size: 50px, 70px;
+    background-repeat: no-repeat;
+}
+
+#verGrade{
+    background-image: url(../Locur/img/1f441.png);
+    background-position: 212px -5px ;
+    background-size: 50px, 70px;
+    background-repeat: no-repeat;
+}
+#verVerti{
+    background-image: url(../Locur/img/1f441.png);
+    background-position: 212px -5px ;
+    background-size: 50px, 70px;
+    background-repeat: no-repeat;
+}
+#addVerti{
+    background-image: url(../Locur/img/26aa.png);
+    background-position: 212px -5px ;
+    background-size: 50px, 70px;
+    background-repeat: no-repeat;
+}
+#addAris{
+    background-image: url(../Locur/img/addAris.png);
+    background-position: 170px -5px;
+    background-size:  89px, 70px;
+    background-repeat: no-repeat;
+}
+#verAdya{
+    background-image: url(../Locur/img/250px-6n-graf.svg.png);
+    background-position: 195px -4px ;
+    background-size: 70px, 90px;
+    background-repeat: no-repeat;
+}
+div.titlegrafo{
+    width: 1497px;
+    height: 55px;
+    background-color: rgb(9, 200, 207);
+    margin-left: -210px;
+    color: white;
+    padding-left: 230px;
+    padding-top: 13px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 20px;
+}
