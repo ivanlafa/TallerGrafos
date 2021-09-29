@@ -111,6 +111,23 @@ if (!isset($_SESSION['grafo'])) {
                 <input type="text" class="controls" name="EaristaOrigen" id="EaristaOrigen" placeholder="Digite vertice origen"> &ensp;
                 <input type="text" class="controls" name="EaristaDestino" id="EaristaDestino" placeholder="Digite vertice destino"> &ensp;
                 </form>
+
+				<form action="index.php" method="post">
+                <input type="submit" class="boton" id="btnAnchura" value="Ver Anchura">&ensp;
+                <input type="text" class="controls" name="txtAnchura" id="txtAnchura" placeholder="Digite id vertice"><br>
+                </form>
+
+				<form action="index.php" method="post">
+                <input type="submit" class="boton" id="btnProfundidad" value="Ver Profunidad">&ensp;
+                <input type="text" class="controls" name="txtProfundidad" id="txtProfundidad" placeholder="Digite id vertice"><br>
+                </form>
+
+				<form action="index.php" method="post">
+                <input type="submit" class="boton" id="btnMascorto" value="Camino mas corto">&ensp;
+                <input type="text" class="controls" name="txtCaristaOrigen" id="txtCaristaOrigen" placeholder="Digite vertice origen"> &ensp;
+                <input type="text" class="controls" name="txtCaristaDestino" id="txtCaristaDestino" placeholder="Digite vertice destino"> &ensp;
+                </form>
+				
             </section>
 
         </main>
@@ -261,7 +278,7 @@ if (isset($_POST["verticeOrigen"],$_POST["verticeDestino"],$_POST["pesoArista"])
 ?>
 
 <?php
-//Ver grado total  
+//Ver grado 
 			if (isset($_POST['verGrado'])) {
 				if ($_POST["verGrado"] == null) {
 		echo "<script>
@@ -354,6 +371,6 @@ if (isset($_POST["EaristaOrigen"],$_POST["EaristaDestino"])){
 
 
 
- <div><h3 align='center'>Ivan Lafaurie. <br> Sebastian Rodriguez. <br>CopyRigth</h3></div>
+ <div class="piepag"><p align='center'>Ivan Lafaurie. <br> Sebastian Rodriguez. <br> Camilo Oliveros. <br>&copy Copyrigth</p></div>
 </body>
 </html>
