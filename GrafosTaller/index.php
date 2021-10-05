@@ -364,8 +364,93 @@ if (isset($_POST["EaristaOrigen"],$_POST["EaristaDestino"])){
 			}
 		}
 	}
-	
  ?>
+	//anchura
+	
+<?php
+
+if(isset($_POST['anchura'])) {
+	if ($_POST["anchura"] == null) {
+		echo "<script>
+			swal('No ah escrito nignun valor', 'Escriba un valor correcto', 'error');
+		     </script>";
+		     include("script.php");
+	}else{
+						$ver = $_POST['anchura'];
+						$val= $_SESSION['grafo']->anchura($ver);
+						if ($val == false) {
+							echo "<script>
+							swal('El vertice no fue encontrado','', 'error');
+							</script>";
+							include("script.php");
+						} else {
+       						print_r($val);
+							include("script.php");
+						}
+					}
+
+				}	
+?>
+	//profundidad
+	<?php
+					if(isset($_POST['profundidad'])) {
+					if ($_POST["profundidad"] == null) {
+		echo "<script>
+			swal('No ah escrito ningun valor', 'Escriba un valor correcto', 'error');
+		     </script>";
+		     include("script.php");
+	}else{	
+						$ver = $_POST['profundidad'];
+						$val = $_SESSION['grafo']->profundidad($ver);
+						if ($val == false) {
+							echo "<script>
+							swal('El vertice no fue encontrado','', 'error');
+							</script>";
+							include("script.php");
+						} else {
+							print_r($val);
+							include("script.php");
+						
+						}
+					}
+			   }	
+			   	
+				?>
+	//Caminomascorto
+	<?php
+	if (isset($_POST["origen"],$_POST["destino"])) {
+$ver=$_SESSION['grafo']->CaminoMasCorto(strtoupper($_POST["origen"]),strtoupper($_POST["destino"]));
+
+	if ($_POST["origen"]==null) {
+		echo "<script>
+			swal('Digite el origen', '', 'error');
+		        </script>";
+		        include("script.php");
+	}else{
+		if ($_POST["destino"]==null) {
+			echo "<script>
+			swal('Digite el destino', '', 'error');
+		        </script>";
+		        include("script.php");
+		}else{
+		if (!$ver){
+			echo "<script>
+			swal('Error', 'No se encuentra uno de los vértices digitados', 'error');
+		         </script>";
+		         include("script.php");
+		     }else{
+	
+	echo "El camino es [".implode(", ", $ver)."]\n";
+
+}
+	include("script2.php");
+
+}
+
+}
+}
+
+	?>
 
 
 
